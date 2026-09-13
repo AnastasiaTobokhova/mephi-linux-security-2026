@@ -1,0 +1,59 @@
+    1  history -w
+    2  clear
+    3  history
+    4  sudo groupadd students
+    5  sudo useradd -m -u 1234 -g students -s /bin/bash user1
+    6  sudo passwd user1
+    7  sudo chage -M 90 user1
+    8  id user1
+    9  sudo chage -l user1
+   10  sudo find / -type f -perm -4000 -print
+   11  ps -eo pid,ruid,euid,comm | awk 'NR == 1 || ($3 == 0 && $2 >= 1000 && $2 < 65534)'
+   12  pwd
+   13  cat /etc/shadow
+   14  /usr/bin/cat /etc/shadow
+   15  sudo cat /etc/shadow
+   16  /home/user1/cat /etc/shadow
+   17  sudo su - user1
+   18  sudo cp /usr/bin/cat /home/user1/cat
+   19  sudo chown root:root /home/user1/cat
+   20  sudo chmod 4755 /home/user1/cat
+   21  sudo su - user1
+   22  sudo cp /usr/bin/chown /home/user1/chown
+   23  sudo chown root:root /home/user1/chown
+   24  sudo chmod 755 /home/user1/chown
+   25  sudo setcap cap_chown=ep /home/user1/chown
+   26  getcap /home/user1/chown
+   27  sudo getcap /home/user1/chown
+   28  sudo - u user1 /usr/bin/cat /etc/shadow
+   29  sudo -u user1 /usr/bin/cat /etc/shadow
+   30  sudo -u user1 /home/user1/cat /etc/shadow
+   31  sudo -u user1 touch /home/user1/testfile
+   32  sudo -u user1 /usr/bin/chown root /home/user1/testfile
+   33  sudo cp /usr/bin/chown /home/user1/chown
+   34  sudo chown root:root /home/user1/chown
+   35  sudo chmod 755 /home/user1/chown
+   36  sudo -u user1 /home/user1/chown root /home/user1/testfile
+   37  sudo setcap cap_chown-ep /home/user1/chown
+   38  sudo -u user1 /home/user1/chown root /home/user1/testfile
+   39  sudo getcap /home/user1/chown
+   40  sudo setcap cap_chown=ep /home/user1/chown
+   41  sudo getcap /home/user1/chown
+   42  sudo -u user1 /home/user1/chown root /home/user1/testfile
+   43  sudo ls -l /home/user1/testfile
+   44  sudo EDITOR=vi visudo
+   45  sudo visudo -c
+   46  sudo -l -U user1
+   47  printf '%s\n' '372772'
+   48  command -v gnome-screenshot
+   49  sudo dnf install gnome-screenshot
+   50  printf '%s\n' '372772'
+   51  gnome-screenshot -f ~/mephi-screenshot.png
+   52  echo "$XDG_SESSION_TYPE"
+   53  gnome-shell --versiom
+   54  gnome-shell --version
+   55  printf '%s\n' '372772'
+   56  clear
+   57  printf '%s\n' '372772'
+   58  hisroty > ~/history.out
+   59  history > ~/history.out
